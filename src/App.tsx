@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, CSSReset } from '@chakra-ui/react';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+import About from './components/About';
+import Career from './components/Career';
+import TechStack from './components/TechStack';
+import Achievements from './components/Achievements';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box bg="white" minH="100vh">
+      <CSSReset />
+      <Navbar />
+      <Box as="main">
+        <Profile />
+        <Box id="about">
+          <About />
+        </Box>
+        <Box id="career">
+          <Career />
+        </Box>
+        <Box id="tech">
+          <TechStack />
+        </Box>
+        <Box id="awards">
+          <Achievements />
+        </Box>
+        <Box id="projects">
+          <Projects />
+        </Box>
+      </Box>
+      <Footer />
+    </Box>
   );
 }
 

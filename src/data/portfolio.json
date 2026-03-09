@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "name": "홍길동",
+    "title": "Firmware / Embedded Systems Developer",
+    "email": "kg3546549@email.com",
+    "github": "https://github.com/kg3546549",
+    "phone": "010-1234-5678",
+    "location": "서울, 대한민국",
+    "avatar": "https://avatars.githubusercontent.com/u/71020096?v=4"
+  },
+  "about": {
+    "introduction": "임베디드 시스템과 하드웨어 제어에 열정을 가진 펌웨어 개발자입니다. 효율적인 리소스 관리와 신뢰성 있는 시스템 구축을 지향합니다.",
+    "highlights": [
+      "ARM Cortex-M 시리즈 기반 펌웨어 개발 경험",
+      "FreeRTOS 및 Bare-metal 환경 최적화 설계",
+      "I2C, SPI, UART 등 다양한 통신 프로토콜 구현",
+      "C/C++ 기반의 고성능 하드웨어 제어 로직 작성"
+    ]
+  },
+  "career": [
+    {
+      "company": "(주)임베디드 솔루션즈",
+      "position": "시니어 펌웨어 엔지니어",
+      "duration": "2021.03 - 현재",
+      "description": "다양한 산업용 센서 노드 및 게이트웨이의 펌웨어 설계를 담당하고 있습니다.",
+      "projects": [
+        "저전력 무선 센서 네트워크 펌웨어 최적화",
+        "차세대 산업용 컨트롤러 플랫폼 개발 주도"
+      ]
+    },
+    {
+      "company": "테크 시스템즈",
+      "position": "펌웨어 엔지니어",
+      "duration": "2018.01 - 2021.02",
+      "description": "차량용 임베디드 모듈 개발 및 품질 관리를 담당했습니다.",
+      "projects": [
+        "자동차 도어 제어 모듈(DCM) 로직 구현",
+        "CAN 통신 드라이버 고도화 및 안정성 테스트"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "category": "Embedded",
+      "technologies": [
+        { 
+          "name": "C", 
+          "level": "Expert",
+          "badges": ["https://img.shields.io/badge/C-00599C?style=flat-square&logo=C&logoColor=white"]
+        },
+        { 
+          "name": "C++", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=Cplusplus&logoColor=white"]
+        },
+        { 
+          "name": "ARM Cortex-M", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/ARM-0091BD?style=flat-square&logo=ARM&logoColor=white"]
+        },
+        { 
+          "name": "FreeRTOS", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/FreeRTOS-0085C1?style=flat-square&logo=FreeRTOS&logoColor=white"]
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "technologies": [
+        { "name": "Git", "level": "Advanced" },
+        { "name": "Docker", "level": "Intermediate" },
+        { "name": "O-Scope/Logic Analyzer", "level": "Advanced" }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "임베디드 해커톤 최우수상",
+      "organization": "K-Software 협회",
+      "date": "2023.11",
+      "description": "저전력 LoRa 기반 환경 모니터링 시스템 구축으로 1위 수상",
+      "link": "https://github.com/kg3546549/award-project"
+    }
+  ],
+  "projects": [
+    {
+      "title": "산업용 로봇 컨트롤러 펌웨어",
+      "description": "실시간 데이터 처리를 위한 고성능 모터 제어 시스템",
+      "techStack": ["STM32", "C++", "CAN Bus", "FreeRTOS"],
+      "duration": "2023.06 - 2023.12",
+      "github": "https://github.com/kg3546549/robot-controller",
+      "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
+      "content": "### 프로젝트 개요\n산업용 다축 로봇의 정밀 제어를 위한 **STM32 기반 펌웨어** 개발 프로젝트입니다.\n\n### 주요 특징\n- **FreeRTOS**를 이용한 멀티태스킹 설계\n- 1ms 주기의 고속 CAN 통신 제어 로직\n- PID 제어 알고리즘 최적화\n\n### 기술적 도전\n통신 지연 문제를 해결하기 위해 인터럽트 우선순위를 재설계하여 **지연 시간을 20% 감소**시켰습니다.",
+      "highlights": [
+        "실시간 멀티태스킹 스케줄링 최적화",
+        "CAN 통신 지연 시간 20% 단축",
+        "에러 진단 및 로깅 시스템 구축"
+      ],
+      "type": "project"
+    },
+    {
+      "title": "스마트 홈 조명 제어기",
+      "description": "ESP32 기반의 WiFi/BLE 연동 조명 제어 모듈",
+      "techStack": ["ESP32", "C", "MQTT", "Arduino"],
+      "duration": "2024.01",
+      "github": "https://github.com/kg3546549/smart-light",
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800",
+      "content": "### 개요\nESP32를 활용한 **IoT 조명 제어 시스템**입니다. 모바일 앱과 연동하여 원격에서 조명을 제어할 수 있습니다.\n\n### 기능\n- MQTT 프로토콜을 이용한 실시간 제어\n- WiFi/BLE 듀얼 스택 활용\n- Deep Sleep 모드를 통한 전력 소모 최소화",
+      "highlights": [
+        "Web Dashboard와 실시간 상태 동기화",
+        "저전력 Deep Sleep 모드 구현"
+      ],
+      "type": "toy"
+    }
+  ],
+  "thankYou": {
+    "message": "부족한 글을 읽어주셔서 감사합니다. 언제나 기술적인 도전과 협업을 환영합니다!"
+  }
+}
