@@ -10,7 +10,6 @@ import {
   IconButton,
   Container,
   Icon,
-  Image,
 } from '@chakra-ui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -60,6 +59,7 @@ const Navbar = () => {
     { name: 'Tech', href: '#tech' },
     { name: 'Awards', href: '#awards' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Activities', href: '#activities' },
   ];
 
   return (
@@ -82,12 +82,6 @@ const Navbar = () => {
             cursor="pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            {/* <Image
-              src={process.env.PUBLIC_URL + '/icon.ico'}
-              alt="Logo"
-              boxSize="24px"
-              objectFit="contain"
-            /> */}
             <Text
               fontFamily="body"
               color="brand.500"

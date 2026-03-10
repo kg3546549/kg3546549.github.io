@@ -11,7 +11,7 @@ import {
   HStack,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { FaExternalLinkAlt, FaYoutube, FaGithub, FaTrophy, FaMedal } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaYoutube, FaGithub, FaMedal } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
 
 const MedalIcon = ({ title }: { title: string }) => {

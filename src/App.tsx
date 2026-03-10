@@ -6,6 +6,7 @@ import About from './components/About';
 import Career from './components/Career';
 import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
+import ExtraActivities from './components/ExtraActivities';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
@@ -30,6 +31,9 @@ function App() {
         </Box>
         <Box id="projects">
           <Projects />
+        </Box>
+        <Box id="activities">
+          <ExtraActivities />
         </Box>
       </Box>
       <Footer />

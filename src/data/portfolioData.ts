@@ -1,6 +1,13 @@
 import { PortfolioData } from '../types/portfolio';
 import { universityAccess } from './projects/universityAccess';
-import { robotWebService, scardElectronReactApp, cardNumberConverter, networkPacketAnalyzer, imageConverter, cloudConnectionTestTool} from './projects';
+import { robotWebService, 
+  scardElectronReactApp, 
+  cardNumberConverter, 
+  networkPacketAnalyzer, 
+  imageConverter, 
+  cloudConnectionTestTool, 
+  ros_slam_navigation
+} from './projects';
 
 export const portfolioData: PortfolioData = {
   profile: {
@@ -22,7 +29,7 @@ export const portfolioData: PortfolioData = {
       "ARM Cortex-M 시리즈 기반 펌웨어 개발 경험",
       "FreeRTOS 및 Bare-metal 환경 최적화 설계 (STM32, ATMEGA ...)",
       "I2C, SPI, UART 등 다양한 통신 프로토콜 구현",
-      "C/C++ 기반의 고성능 하드웨어 제어 로직 작성"
+      "C/C++ 기반의 ISO14443 스마트카드 제어 로직 작성"
     ]
   },
   career: [
@@ -34,6 +41,14 @@ export const portfolioData: PortfolioData = {
       projects: [
         "ISO14443A/B 카드 리더 펌웨어 개발 및 최적화",
         "RS422/Ethernet 통신 기반 카드리더 통신 프로토콜 설계 및 개발"
+      ]
+    },
+    {
+      company: "육군 제8기동사단",
+      position: "정보통신대대 정보보호병 병장 만기전역",
+      duration: "2020.07 - 2022.01",
+      description: "",
+      projects: [
       ]
     },
     {
@@ -145,14 +160,14 @@ export const portfolioData: PortfolioData = {
       organization: "고용노동부",
       date: "2018.10",
       description: `공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다. 
-대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+  대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
       link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916",
       youtubeLink: "https://www.youtube.com/watch?v=heukxeQGX0Q",
     },
     {
       title: "2018 충북기능경기대회\n공업전자기기 금메달",
       organization: "충청북도 교육청",
-      date: "2018.04",
+      date: "2018.10",
       description: "공업전자기기 분야에서 충북 1위를 차지하여 금메달을 수상하였습니다.",
       link: "https://www.jbnews.com/news/articleView.html?idxno=837057"
     },
@@ -161,7 +176,7 @@ export const portfolioData: PortfolioData = {
       organization: "고용노동부",
       date: "2017.10",
       description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
-전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+  전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
       link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
     },
     {
@@ -170,14 +185,12 @@ export const portfolioData: PortfolioData = {
       date: "2017.07",
       description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
 전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
-      // link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
     },
     {
       title: "2017 충북기능경기대회\n공업전자기기 금메달",
       organization: "충청북도 교육청",
       date: "2017.04",
       description: "공업전자기기 분야에서 충북 3위를 차지하여 동메달을 수상하였습니다.",
-      // link: "https://www.jbnews.com/news/articleView.html?idxno=837057"
     },
     {
       title: "2016 전국 고교생 전자CAD \n기술대회 동상",
@@ -185,7 +198,22 @@ export const portfolioData: PortfolioData = {
       date: "2016.07",
       description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
 전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
-      // link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
+    }
+  ],
+  activities: [
+    {
+      title: "지방기능경기대회 기술위원",
+      organization: "한국산업인력공단",
+      duration: "2022, 2023, 2026",
+      description: "공업전자기기 직종 심사위원 및 과제 출제",
+      type: "Technical Committee"
+    },
+    {
+      title: "일본 SECOM 사외이사 등 주요인사 방문 당시 동시통역",
+      organization: "에스원",
+      duration: "2024",
+      description: "일본 SECOM의 하나오카 타쿠로(에스원 대표이사) 취임 당시 에스원 관제센터 등 주요 시설 안내 동시통역 수행",
+      type: "Interpretation"
     }
   ],
   projects: [
@@ -195,7 +223,8 @@ export const portfolioData: PortfolioData = {
     networkPacketAnalyzer,
     imageConverter,
     cloudConnectionTestTool,
-    robotWebService
+    robotWebService,
+    ros_slam_navigation
   ],
   thankYou: {
     message: "부족한 페이지에 방문하여 읽어주셔서 감사합니다. 언제나 기술적인 도전과 협업을 환영합니다!"

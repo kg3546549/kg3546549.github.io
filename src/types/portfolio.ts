@@ -32,6 +32,14 @@ export interface Achievement {
   githubLink?: string;
 }
 
+export interface Activity {
+  title: string;
+  organization: string;
+  duration: string;
+  description: string;
+  type: 'Technical Committee' | 'Interpretation' | 'Volunteer' | 'Mentoring' | 'Other';
+}
+
 export interface CareerEntry {
   company: string;
   position: string;
@@ -57,6 +65,7 @@ export interface PortfolioData {
   career: CareerEntry[];
   techStack: TechCategory[];
   achievements: Achievement[];
+  activities?: Activity[];
   projects: Project[];
   thankYou: {
     message: string;
