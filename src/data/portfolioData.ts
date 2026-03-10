@@ -21,7 +21,7 @@ export const portfolioData: PortfolioData = {
     github: "https://github.com/kg3546549",
     phone: "+82 10-4596-7142",
     location: "서울, 대한민국",
-    avatar: "https://avatars.githubusercontent.com/u/71020096?v=4"
+    avatar: "images/profile.jpeg"
   },
   about: {
     introduction: 
