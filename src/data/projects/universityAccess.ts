@@ -1,14 +1,14 @@
 import { Project } from '../../types/portfolio';
 
 export const universityAccess: Project = {
-  title: "대학교 출입통제 시스템 구축",
+  title: "대규모 출입통제 시스템 구축",
   description: "대학교 출입 통제 시스템 구축 및 카드리더 커스터마이징 펌웨어 개발",
   techStack: ["STM32", "C", "Serial", "ucOS-II"],
   duration: "2022.01 - 현재",
   image: "/images/S1CardReader.jpeg",
   content: `
 # 프로젝트 개요
-대학교 / 기업 등 엔터프라이즈 출입 방범 시스템 구축
+대규모 / 기업 등 엔터프라이즈 출입 방범 시스템 구축
 
 # 주요 특징
 - 출입,방범 시스템 설계 및 구축 지원

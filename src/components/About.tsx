@@ -36,7 +36,7 @@ const About: React.FC = () => {
           </Flex>
 
           <VStack align="flex-start" spacing={4}>
-            <Text fontSize="lg" color="gray.600">
+            <Text fontSize="lg" color="gray.600" whiteSpace="pre-wrap">
               {about.introduction}
             </Text>
             

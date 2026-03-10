@@ -10,6 +10,7 @@ import {
   IconButton,
   Container,
   Icon,
+  Image,
 } from '@chakra-ui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -76,16 +77,26 @@ const Navbar = () => {
     >
       <Container maxW="6xl" h="100%">
         <Flex h="100%" alignItems={'center'} justifyContent={'space-between'}>
-          <Text
-            fontFamily="body"
-            color="brand.500"
-            fontWeight="bold"
-            fontSize="xl"
+          <HStack
+            spacing={2}
             cursor="pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            KG
-          </Text>
+            {/* <Image
+              src={process.env.PUBLIC_URL + '/icon.ico'}
+              alt="Logo"
+              boxSize="24px"
+              objectFit="contain"
+            /> */}
+            <Text
+              fontFamily="body"
+              color="brand.500"
+              fontWeight="bold"
+              fontSize="xl"
+            >
+              Kim Geon
+            </Text>
+          </HStack>
 
           <HStack spacing={8} alignItems={'center'} display={{ base: 'none', md: 'flex' }}>
             <HStack as={'nav'} spacing={4}>

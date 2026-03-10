@@ -60,8 +60,7 @@ const Profile: React.FC = () => {
 
             <Box maxW="600px">
               <Text fontSize="lg" color="gray.600">
-                I'm a firmware developer specialized in embedded systems and hardware-software integration. 
-                Currently focused on building reliable and efficient low-level software.
+                
               </Text>
             </Box>
 

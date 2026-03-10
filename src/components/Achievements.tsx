@@ -11,13 +11,13 @@ import {
   HStack,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { FaExternalLinkAlt, FaYoutube, FaGithub, FaTrophy } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaYoutube, FaGithub, FaTrophy, FaMedal } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
 
 const MedalIcon = ({ title }: { title: string }) => {
-  if (title.includes('금메달')) return <Icon as={FaTrophy as any} color="yellow.400" w={6} h={6} />;
-  if (title.includes('은메달')) return <Icon as={FaTrophy as any} color="gray.400" w={6} h={6} />;
-  if (title.includes('동메달')) return <Icon as={FaTrophy as any} color="orange.400" w={6} h={6} />;
+  if (title.includes('금메달') || title.includes('대상')) return <Icon as={FaMedal as any} color="yellow.400" w={6} h={6} />;
+  if (title.includes('은메달')) return <Icon as={FaMedal as any} color="gray.400" w={6} h={6} />;
+  if (title.includes('동메달') || title.includes('동상')) return <Icon as={FaMedal as any} color="orange.400" w={6} h={6} />;
   return null;
 };
 

@@ -1,6 +1,6 @@
 import { PortfolioData } from '../types/portfolio';
 import { universityAccess } from './projects/universityAccess';
-import { robotWebService, scardElectronReactApp } from './projects';
+import { robotWebService, scardElectronReactApp, cardNumberConverter, networkPacketAnalyzer, imageConverter, cloudConnectionTestTool} from './projects';
 
 export const portfolioData: PortfolioData = {
   profile: {
@@ -13,10 +13,14 @@ export const portfolioData: PortfolioData = {
     avatar: "https://avatars.githubusercontent.com/u/71020096?v=4"
   },
   about: {
-    introduction: "임베디드 시스템과 하드웨어 제어에 열정을 가진 펌웨어 개발자입니다. 효율적인 리소스 관리와 신뢰성 있는 시스템 구축을 지향합니다.",
+    introduction: 
+    `
+    임베디드 시스템과 하드웨어 제어에 열정을 가진 펌웨어 개발자입니다. 효율적인 리소스 관리와 신뢰성 있는 시스템 구축을 지향합니다.
+    최근에는 로봇 제어 시스템(ROS, SLAM, Navigation)에 관심을 갖고 연구를 진행하고 있습니다.
+    `,
     highlights: [
       "ARM Cortex-M 시리즈 기반 펌웨어 개발 경험",
-      "FreeRTOS 및 Bare-metal 환경 최적화 설계",
+      "FreeRTOS 및 Bare-metal 환경 최적화 설계 (STM32, ATMEGA ...)",
       "I2C, SPI, UART 등 다양한 통신 프로토콜 구현",
       "C/C++ 기반의 고성능 하드웨어 제어 로직 작성"
     ]
@@ -29,7 +33,7 @@ export const portfolioData: PortfolioData = {
       description: "출입용 카드리더 임베디드 개발 및 품질 관리를 담당했습니다.",
       projects: [
         "ISO14443A/B 카드 리더 펌웨어 개발 및 최적화",
-        "RS422 통신 기반 카드리더 통신 프로토콜 설계 및 개발"
+        "RS422/Ethernet 통신 기반 카드리더 통신 프로토콜 설계 및 개발"
       ]
     },
     {
@@ -39,7 +43,7 @@ export const portfolioData: PortfolioData = {
       description: "출입 통제 시스템의 펌웨어 개발과 유지보수를 담당했습니다.",
       projects: [
         "한양대학교 출입 통제 시스템 노후화 개선 개발",
-        "차세대 산업용 컨트롤러 플랫폼 개발 주도"
+        "대규모 출입 시스템 장애 원인 분석 및 개선",
       ]
     }
   ],
@@ -148,7 +152,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "2018 충북기능경기대회\n공업전자기기 금메달",
       organization: "충청북도 교육청",
-      date: "2018.10",
+      date: "2018.04",
       description: "공업전자기기 분야에서 충북 1위를 차지하여 금메달을 수상하였습니다.",
       link: "https://www.jbnews.com/news/articleView.html?idxno=837057"
     },
@@ -159,14 +163,41 @@ export const portfolioData: PortfolioData = {
       description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
 전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
       link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
+    },
+    {
+      title: "2017 전국 고교생 전자CAD \n기술대회 대상",
+      organization: "한국폴리텍대학교, 나인플러스IT, 고용노동부",
+      date: "2017.07",
+      description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
+전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+      // link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
+    },
+    {
+      title: "2017 충북기능경기대회\n공업전자기기 금메달",
+      organization: "충청북도 교육청",
+      date: "2017.04",
+      description: "공업전자기기 분야에서 충북 3위를 차지하여 동메달을 수상하였습니다.",
+      // link: "https://www.jbnews.com/news/articleView.html?idxno=837057"
+    },
+    {
+      title: "2016 전국 고교생 전자CAD \n기술대회 동상",
+      organization: "한국폴리텍대학교, 나인플러스IT",
+      date: "2016.07",
+      description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
+전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+      // link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
     }
   ],
   projects: [
     universityAccess,
-    robotWebService,
-    scardElectronReactApp
+    scardElectronReactApp,
+    cardNumberConverter,
+    networkPacketAnalyzer,
+    imageConverter,
+    cloudConnectionTestTool,
+    robotWebService
   ],
   thankYou: {
-    message: "부족한 글을 읽어주셔서 감사합니다. 언제나 기술적인 도전과 협업을 환영합니다!"
+    message: "부족한 페이지에 방문하여 읽어주셔서 감사합니다. 언제나 기술적인 도전과 협업을 환영합니다!"
   }
 };
