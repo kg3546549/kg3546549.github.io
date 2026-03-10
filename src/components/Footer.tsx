@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             <Heading size="md" color="text.primary" fontFamily="body">
               // 읽어주셔서 감사합니다
             </Heading>
-            <Text color="gray.600" textAlign="center" maxW="lg">
+            <Text color="gray.600" textAlign="center" maxW="lg" whiteSpace="pre-wrap">
               {thankYou.message}
             </Text>
           </VStack>

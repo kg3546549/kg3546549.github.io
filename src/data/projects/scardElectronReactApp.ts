@@ -1,7 +1,7 @@
 import { Project } from '../../types/portfolio';
 
 export const scardElectronReactApp: Project = {
-  title: "스마트카드 통신 및 APDU 분석 SW",
+  title: "스마트카드 통신 및 APDU 분석용 SW",
   description: "Electron과 React 기반의 스마트카드 통신, 프로토콜 분석, APDU 자동화 지원 애플리케이션",
   techStack: [
     "Electron",

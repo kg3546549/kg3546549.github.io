@@ -1,6 +1,10 @@
 import { PortfolioData } from '../types/portfolio';
-import { universityAccess } from './projects/universityAccess';
-import { robotWebService, 
+// import { universityAccess } from './projects/universityAccess';
+import { 
+  universityAccess,
+  custom_security_systems,
+  xv6Practice,
+  robotWebService, 
   scardElectronReactApp, 
   cardNumberConverter, 
   networkPacketAnalyzer, 
@@ -159,8 +163,9 @@ export const portfolioData: PortfolioData = {
       title: "2018 전국기능경기대회\n공업전자기기 동메달",
       organization: "고용노동부",
       date: "2018.10",
-      description: `공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다. 
-  대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+      description: 
+`공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다.
+대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 연마하였습니다.`,
       link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916",
       youtubeLink: "https://www.youtube.com/watch?v=heukxeQGX0Q",
     },
@@ -176,7 +181,7 @@ export const portfolioData: PortfolioData = {
       organization: "고용노동부",
       date: "2017.10",
       description: `공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.
-  전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
+전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.`,
       link: "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
     },
     {
@@ -218,15 +223,19 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     universityAccess,
+    custom_security_systems,
     scardElectronReactApp,
     cardNumberConverter,
     networkPacketAnalyzer,
     imageConverter,
     cloudConnectionTestTool,
     robotWebService,
-    ros_slam_navigation
+    ros_slam_navigation,
+    xv6Practice
   ],
   thankYou: {
-    message: "부족한 페이지에 방문하여 읽어주셔서 감사합니다. 언제나 기술적인 도전과 협업을 환영합니다!"
+    message: 
+`부족한 글을 읽어주셔서 감사합니다. 
+언제나 기술적인 도전과 협업을 환영합니다!`
   }
 };

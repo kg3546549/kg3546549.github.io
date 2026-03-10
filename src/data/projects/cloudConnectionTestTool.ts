@@ -10,7 +10,7 @@ export const cloudConnectionTestTool: Project = {
   ],
   duration: "2024.06",
   github: "",
-  image: "images/cloud-test-tool/main.png",
+  // image: "images/cloud-test-tool/main.png",
   content: `### 개요
 에스원 클라우드매니저 접속 과정에서 발생하는 통신 문제를 분석하기 위한 **네트워크 접속 진단 도구**입니다.  
 디바이스가 클라우드 시스템에 연결되는 전체 Flow를 Timeline 형태로 시각화하여 **현장 설치 기술자들이 장애 원인을 쉽게 파악할 수 있도록 설계**했습니다.

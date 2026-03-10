@@ -71,6 +71,28 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
             </HStack>
           );
         }
+        if (trimmedLine.startsWith('![')) {
+          const match = trimmedLine.match(/!\[(.*?)\]\((.*?)\)/);
+          if (match) {
+            const alt = match[1];
+            const url = match[2];
+            const finalUrl = url.startsWith('http') ? url : process.env.PUBLIC_URL + url;
+            return (
+              <Box key={index} py={4} w="100%">
+                <Image
+                  src={finalUrl}
+                  alt={alt}
+                  borderRadius="md"
+                  boxShadow="sm"
+                  maxH="400px"
+                  objectFit="contain"
+                  mx="auto"
+                />
+                {alt && <Text fontSize="xs" color="gray.500" textAlign="center" mt={2}>{alt}</Text>}
+              </Box>
+            );
+          }
+        }
         if (trimmedLine === '') return <Box key={index} h={2} />;
         
         return (
@@ -187,7 +209,7 @@ const Projects: React.FC = () => {
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
                 <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>05.</Text>
-                Main Projects
+                Key Work Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />
             </Flex>
