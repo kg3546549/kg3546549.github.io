@@ -11,8 +11,15 @@ import {
   HStack,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { FaExternalLinkAlt, FaYoutube, FaGithub } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaYoutube, FaGithub, FaTrophy } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
+
+const MedalIcon = ({ title }: { title: string }) => {
+  if (title.includes('금메달')) return <Icon as={FaTrophy as any} color="yellow.400" w={6} h={6} />;
+  if (title.includes('은메달')) return <Icon as={FaTrophy as any} color="gray.400" w={6} h={6} />;
+  if (title.includes('동메달')) return <Icon as={FaTrophy as any} color="orange.400" w={6} h={6} />;
+  return null;
+};
 
 const Achievements: React.FC = () => {
   const { achievements } = usePortfolioStore((state) => state.data);
@@ -59,14 +66,15 @@ const Achievements: React.FC = () => {
                 justifyContent="space-between"
               >
                 <VStack align="flex-start" spacing={1} mb={4} flexGrow={1}>
-                  <HStack justify="space-between" align="flex-start" w="100%">
-                    <Heading as="h3" fontSize="xl" color="text.primary" whiteSpace="pre-wrap">
-                      {achievement.title}
-                    </Heading>
+                  <HStack justify="space-between" align="flex-start" w="100%" mb={2}>
+                    <MedalIcon title={achievement.title} />
                     <Text fontSize="sm" fontFamily="body" color="gray.500" whiteSpace="nowrap">
                       {achievement.date}
                     </Text>
                   </HStack>
+                  <Heading as="h3" fontSize="xl" color="text.primary" whiteSpace="pre-wrap">
+                    {achievement.title}
+                  </Heading>
                   <Text fontSize="sm" fontFamily="body" color="brand.500">
                     {achievement.organization}
                   </Text>

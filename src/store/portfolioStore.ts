@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { PortfolioData } from '../types/portfolio';
-import portfolioData from '../data/portfolio.json';
+import { portfolioData } from '../data/portfolioData';
 
 interface PortfolioStore {
   data: PortfolioData;
@@ -9,8 +9,7 @@ interface PortfolioStore {
 }
 
 export const usePortfolioStore = create<PortfolioStore>((set, get) => ({
-  data: portfolioData as PortfolioData,
-
+  data: portfolioData,
   setData: (data: PortfolioData) => set({ data }),
 
   updateProfile: (profile) => set((state) => ({

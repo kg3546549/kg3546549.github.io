@@ -19,7 +19,7 @@ export interface Project {
   image?: string;
   content?: string;
   highlights: string[];
-  type: 'project' | 'toy';
+  type: 'project' | 'toy' | 'research';
 }
 
 export interface Achievement {

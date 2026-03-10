@@ -26,29 +26,56 @@ import { Project } from '../types/portfolio';
 
 const MarkdownRenderer = ({ content }: { content: string }) => {
   const lines = content.split('\n');
+
+  const renderInline = (text: string, color: string = "gray.600") => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) => 
+      part.startsWith('**') && part.endsWith('**') 
+        ? <Text as="span" key={i} fontWeight="bold" color="brand.500">{part.slice(2, -2)}</Text>
+        : <Text as="span" key={i} color={color}>{part}</Text>
+    );
+  };
+
   return (
     <VStack align="flex-start" spacing={3} w="100%">
       {lines.map((line, index) => {
-        if (line.startsWith('### ')) {
-          return <Heading key={index} size="md" pt={4} color="text.primary">{line.replace('### ', '')}</Heading>;
+        const trimmedLine = line.trim();
+        if (trimmedLine.startsWith('# ')) {
+          return (
+            <Heading key={index} size="lg" pt={3} color="text.primary">
+              {renderInline(trimmedLine.replace('# ', ''), 'text.primary')}
+            </Heading>
+          );
         }
-        if (line.startsWith('- ')) {
+        if (trimmedLine.startsWith('## ')) {
+          return (
+            <Heading key={index} size="md" pt={2} color="text.primary">
+              {renderInline(trimmedLine.replace('## ', ''), 'text.primary')}
+            </Heading>
+          );
+        }
+        if (trimmedLine.startsWith('### ')) {
+          return (
+            <Heading key={index} size="sm" pt={1} color="text.primary">
+              {renderInline(trimmedLine.replace('### ', ''), 'text.primary')}
+            </Heading>
+          );
+        }
+        if (trimmedLine.startsWith('- ')) {
           return (
             <HStack key={index} align="flex-start" spacing={2} pl={2}>
               <Text color="accent.500">▹</Text>
-              <Text color="gray.600">{line.replace('- ', '')}</Text>
+              <Text color="gray.600" lineHeight="tall">
+                {renderInline(trimmedLine.replace('- ', ''))}
+              </Text>
             </HStack>
           );
         }
-        // Basic Bold handling
-        const parts = line.split(/(\*\*.*?\*\*)/g);
+        if (trimmedLine === '') return <Box key={index} h={2} />;
+        
         return (
           <Text key={index} color="gray.600" lineHeight="tall">
-            {parts.map((part, i) => 
-              part.startsWith('**') && part.endsWith('**') 
-                ? <Text as="span" key={i} fontWeight="bold" color="brand.500">{part.slice(2, -2)}</Text>
-                : part
-            )}
+            {renderInline(trimmedLine)}
           </Text>
         );
       })}
