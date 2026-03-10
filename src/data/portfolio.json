@@ -69,7 +69,12 @@
       "category": "Web",
       "technologies": [
         { 
-          "name": "React", 
+          "name": "Javascript", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=React&logoColor=white"]
+        },
+        { 
+          "name": "React.js", 
           "level": "Advanced",
           "badges": ["https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"]
         },
@@ -77,12 +82,22 @@
           "name": "Nest.js", 
           "level": "Intermediate",
           "badges": ["https://img.shields.io/badge/Nest.js-E0234E?style=flat-square&logo=NestJS&logoColor=white"]
+        },
+        { 
+          "name": "Electron.js", 
+          "level": "Intermediate",
+          "badges": ["https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white"]
         }
       ]
     },
     {
       "category": "Mobile",
       "technologies": [
+        { 
+          "name": "Dart", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/Dart-00B4AB?style=flat-square&logo=Flutter&logoColor=white"]
+        },
         { 
           "name": "Flutter", 
           "level": "Advanced",
@@ -96,11 +111,23 @@
       ]
     },
     {
+      "category": "Robot",
+      "technologies": [
+        { 
+          "name": "ROS1", 
+          "level": "Intermediate",
+          "badges": ["https://img.shields.io/badge/ROS-22314E?style=flat-square&logo=ros&logoColor=white"]
+        }
+      ]
+    },
+    {
       "category": "Tools",
       "technologies": [
         { "name": "Git", "level": "Advanced" },
         { "name": "Docker", "level": "Intermediate" },
-        { "name": "OscilloScope/Logic Analyzer", "level": "Advanced" }
+        { "name": "IAR Embedded Workbench", "level": "Advanced" },
+        { "name": "STM32CubeIDE", "level": "Intermediate" },
+        { "name": "Altium Designer", "level": "Intermediate"}
       ]
     }
   ],
@@ -109,7 +136,7 @@
       "title": "2018 전국기능경기대회\n공업전자기기 동메달",
       "organization": "고용노동부",
       "date": "2018.10",
-      "description": "공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다. \n대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기, 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.",
+      "description": "공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다. \n대회에서는 PWM 측정기 회로 설계, 로봇 팔 시스템 펌웨어 개발, 인형뽑기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.",
       "link": "https://www.ccdailynews.com/news/articleView.html?idxno=980916",
       "youtubeLink": "https://www.youtube.com/watch?v=heukxeQGX0Q",
       "__githubLink__": "https://github.com/kg3546549/some-achievement-repo"
@@ -131,24 +158,26 @@
   ],
   "projects": [
     {
-      "title": "산업용 로봇 컨트롤러 펌웨어",
-      "description": "실시간 데이터 처리를 위한 고성능 모터 제어 시스템",
-      "techStack": ["STM32", "C++", "CAN Bus", "FreeRTOS"],
-      "duration": "2023.06 - 2023.12",
-      "github": "https://github.com/kg3546549/robot-controller",
-      "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
-      "content": "### 프로젝트 개요\n산업용 다축 로봇의 정밀 제어를 위한 **STM32 기반 펌웨어** 개발 프로젝트입니다.\n\n### 주요 특징\n- **FreeRTOS**를 이용한 멀티태스킹 설계\n- 1ms 주기의 고속 CAN 통신 제어 로직\n- PID 제어 알고리즘 최적화\n\n### 기술적 도전\n통신 지연 문제를 해결하기 위해 인터럽트 우선순위를 재설계하여 **지연 시간을 20% 감소**시켰습니다.",
+      "title": "대학교 출입통제 시스템 구축",
+      "description": "대학교 출입 통제 시스템 구축 및 카드리더 커스터마이징 펌웨어 개발",
+      "techStack": ["STM32", "C", "Serial", "ucOS-II"],
+      "duration": "2022.01 - 현재",
+      "__github__": "https://github.com/kg3546549",
+      "image": "/images/S1CardReader.jpeg",
+      "content": "### 프로젝트 개요\n대학교 / 기업 등 엔터프라이즈 출입 방범 시스템 구축\n\n### 주요 특징\n- 출입,방범 시스템 설계 및 구축 지원\n- 학번 / 직번 체계 연동 사양 설계 및 개발\n- 학생증 / 사원증 연동 사양 설계 및 개발\n- 모바일 학생증 / 사원증 App(Android, iOS) 개발 기술지원\n- 카드리더, 지문리더, 얼굴리더 Firmware 개발\n- 원격 펌웨어 업그레이드 시스템 구축n\n### 기술적 도전\n통신 지연 문제를 해결하기 위해 인터럽트 우선순위를 재설계하여 **지연 시간을 20% 감소**시켰습니다.",
+      
       "highlights": [
-        "실시간 멀티태스킹 스케줄링 최적화",
-        "CAN 통신 지연 시간 20% 단축",
-        "에러 진단 및 로깅 시스템 구축"
+        "카드리더, 지문리더, 얼굴리더 Firmware 개발",
+        "모바일 학생증 / 사원증 App(Android, iOS) 개발 기술지원",
+        "원격 펌웨어 업그레이드 시스템 구축",
+        "학번 / 직번 체계 연동 사양 설계 및 개발"
       ],
       "type": "project"
     },
     {
-      "title": "스마트 홈 조명 제어기",
-      "description": "ESP32 기반의 WiFi/BLE 연동 조명 제어 모듈",
-      "techStack": ["ESP32", "C", "MQTT", "Arduino"],
+      "title": "실시간 로봇 제어를 위한 웹 서비스",
+      "description": "React.js 기반의 Robot Operating System(ROS) 연동 제어 웹 페이지",
+      "techStack": ["React.js", "Nest.js", "ROS", "Arduino", "STM32", "C++", "FreeRTOS", "Linux"],
       "duration": "2024.01",
       "github": "https://github.com/kg3546549/smart-light",
       "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800",
