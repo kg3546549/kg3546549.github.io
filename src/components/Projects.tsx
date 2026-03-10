@@ -93,7 +93,7 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
 
     <VStack align="stretch" p={6} flex={1} spacing={4}>
       <HStack justify="space-between">
-        <Text fontSize="xs" fontFamily="mono" color="accent.500" fontWeight="bold">
+        <Text fontSize="xs" fontFamily="body" color="accent.500" fontWeight="bold">
           {project.type === 'project' ? 'PROJECT' : 'TOY PROJECT'}
         </Text>
         <HStack spacing={4}>
@@ -130,7 +130,7 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
 
       <HStack spacing={3} wrap="wrap" pt={4} borderTop="1px solid" borderColor="gray.100">
         {project.techStack.map((tech, techIndex) => (
-          <Text key={techIndex} fontFamily="mono" fontSize="2xs" color="brand.500" fontWeight="bold">
+          <Text key={techIndex} fontFamily="body" fontSize="2xs" color="brand.500" fontWeight="bold">
             #{tech}
           </Text>
         ))}
@@ -159,7 +159,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>05.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>05.</Text>
                 Main Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />
@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>06.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>06.</Text>
                 Toy Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />
@@ -192,11 +192,11 @@ const Projects: React.FC = () => {
           <ModalContent borderRadius="xl" bg="white">
             <ModalHeader borderBottom="1px solid" borderColor="gray.100" py={6}>
               <VStack align="flex-start" spacing={1}>
-                <Text color="accent.500" fontSize="xs" fontFamily="mono" fontWeight="bold">
+                <Text color="accent.500" fontSize="xs" fontFamily="body" fontWeight="bold">
                   {selectedProject?.type?.toUpperCase()}
                 </Text>
                 <Heading size="lg" color="text.primary">{selectedProject?.title}</Heading>
-                <Text fontSize="sm" color="gray.500" fontFamily="mono">{selectedProject?.duration}</Text>
+                <Text fontSize="sm" color="gray.500" fontFamily="body">{selectedProject?.duration}</Text>
               </VStack>
             </ModalHeader>
             <ModalCloseButton mt={4} />
@@ -224,7 +224,7 @@ const Projects: React.FC = () => {
                   <Heading size="sm" color="text.primary">Tech Stack</Heading>
                   <HStack wrap="wrap" spacing={2}>
                     {selectedProject?.techStack.map((tech, i) => (
-                      <Text key={i} px={3} py={1} bg="brand.50" color="brand.500" borderRadius="full" fontSize="xs" fontWeight="bold" fontFamily="mono">
+                      <Text key={i} px={3} py={1} bg="brand.50" color="brand.500" borderRadius="full" fontSize="xs" fontWeight="bold" fontFamily="body">
                         {tech}
                       </Text>
                     ))}

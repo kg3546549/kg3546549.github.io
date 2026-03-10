@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       <Container maxW="6xl">
         <VStack spacing={10}>
           <VStack spacing={4}>
-            <Heading size="md" color="text.primary" fontFamily="mono">
+            <Heading size="md" color="text.primary" fontFamily="body">
               // 읽어주셔서 감사합니다
             </Heading>
             <Text color="gray.600" textAlign="center" maxW="lg">
@@ -48,18 +48,18 @@ const Footer: React.FC = () => {
           
           <VStack spacing={1}>
             <Text
-              fontFamily="mono"
+              fontFamily="body"
               fontSize="xs"
               color="gray.400"
             >
               Built by {profile.name}
             </Text>
             <Text
-              fontFamily="mono"
+              fontFamily="body"
               fontSize="xs"
               color="gray.400"
             >
-              © 2024 - Portfolio Template
+              © 2026 - Portfolio created with React and Chakra UI
             </Text>
           </VStack>
         </VStack>

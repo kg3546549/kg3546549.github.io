@@ -36,7 +36,7 @@ const TechStack: React.FC = () => {
               color="text.primary"
               whiteSpace="nowrap"
             >
-              <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>
+              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>
                 03.
               </Text>
               Technical Skills
@@ -64,7 +64,7 @@ const TechStack: React.FC = () => {
                 <Heading
                   as="h3"
                   fontSize="lg"
-                  fontFamily="mono"
+                  fontFamily="body"
                   color="text.primary"
                   mb={4}
                 >

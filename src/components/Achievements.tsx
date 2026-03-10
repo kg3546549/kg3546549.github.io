@@ -9,8 +9,9 @@ import {
   Icon,
   Flex,
   HStack,
+  SimpleGrid,
 } from '@chakra-ui/react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaYoutube, FaGithub } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
 
 const Achievements: React.FC = () => {
@@ -29,7 +30,7 @@ const Achievements: React.FC = () => {
               color="text.primary"
               whiteSpace="nowrap"
             >
-              <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>
+              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>
                 04.
               </Text>
               Awards & Achievements
@@ -37,7 +38,7 @@ const Achievements: React.FC = () => {
             <Box h="1px" bg="gray.200" flex={1} ml={4} />
           </Flex>
 
-          <VStack spacing={8} align="stretch">
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {achievements.map((achievement, index) => (
               <Box
                 key={index}
@@ -52,39 +53,71 @@ const Achievements: React.FC = () => {
                   transition: 'all 0.3s ease',
                   boxShadow: 'md',
                 }}
+                height="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
               >
-                <HStack justify="space-between" align="flex-start" mb={4}>
-                  <VStack align="flex-start" spacing={1}>
-                    <Heading as="h3" fontSize="xl" color="text.primary">
+                <VStack align="flex-start" spacing={1} mb={4} flexGrow={1}>
+                  <HStack justify="space-between" align="flex-start" w="100%">
+                    <Heading as="h3" fontSize="xl" color="text.primary" whiteSpace="pre-wrap">
                       {achievement.title}
                     </Heading>
-                    <Text fontSize="sm" fontFamily="mono" color="brand.500">
-                      {achievement.organization}
+                    <Text fontSize="sm" fontFamily="body" color="gray.500" whiteSpace="nowrap">
+                      {achievement.date}
                     </Text>
-                  </VStack>
-                  <Text fontSize="sm" fontFamily="mono" color="gray.500">
-                    {achievement.date}
+                  </HStack>
+                  <Text fontSize="sm" fontFamily="body" color="brand.500">
+                    {achievement.organization}
                   </Text>
+                  <Text color="gray.600" mt={2} whiteSpace="pre-wrap">
+                    {achievement.description}
+                  </Text>
+                </VStack>
+                <HStack spacing={4} mt={4}>
+                  {achievement.link && (
+                    <Link
+                      href={achievement.link}
+                      isExternal
+                      color="brand.500"
+                      fontFamily="body"
+                      fontSize="sm"
+                      display="flex"
+                      alignItems="center"
+                    >
+                      View Details <Icon as={FaExternalLinkAlt as any} ml={2} />
+                    </Link>
+                  )}
+                  {achievement.youtubeLink && (
+                    <Link
+                      href={achievement.youtubeLink}
+                      isExternal
+                      color="brand.500"
+                      fontFamily="body"
+                      fontSize="sm"
+                      display="flex"
+                      alignItems="center"
+                    >
+                      YouTube <Icon as={FaYoutube as any} ml={2} />
+                    </Link>
+                  )}
+                  {achievement.githubLink && (
+                    <Link
+                      href={achievement.githubLink}
+                      isExternal
+                      color="brand.500"
+                      fontFamily="body"
+                      fontSize="sm"
+                      display="flex"
+                      alignItems="center"
+                    >
+                      GitHub <Icon as={FaGithub as any} ml={2} />
+                    </Link>
+                  )}
                 </HStack>
-                <Text color="gray.600" mb={4}>
-                  {achievement.description}
-                </Text>
-                {achievement.link && (
-                  <Link
-                    href={achievement.link}
-                    isExternal
-                    color="brand.500"
-                    fontFamily="mono"
-                    fontSize="sm"
-                    display="flex"
-                    alignItems="center"
-                  >
-                    View Details <Icon as={FaExternalLinkAlt as any} ml={2} />
-                  </Link>
-                )}
               </Box>
             ))}
-          </VStack>
+          </SimpleGrid>
         </VStack>
       </Container>
     </Box>

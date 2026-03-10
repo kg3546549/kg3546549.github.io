@@ -27,7 +27,7 @@ const About: React.FC = () => {
               color="text.primary"
               whiteSpace="nowrap"
             >
-              <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>
+              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>
                 01.
               </Text>
               About Me
@@ -47,8 +47,8 @@ const About: React.FC = () => {
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2} w="100%">
               {about.highlights.map((highlight, index) => (
                 <HStack key={index} align="flex-start" spacing={2}>
-                  <Text color="accent.500" fontFamily="mono" fontSize="xs" mt={1}>▹</Text>
-                  <Text fontSize="sm" fontFamily="mono" color="gray.700">{highlight}</Text>
+                  <Text color="accent.500" fontFamily="body" fontSize="xs" mt={1}>▹</Text>
+                  <Text fontSize="sm" fontFamily="body" color="gray.700">{highlight}</Text>
                 </HStack>
               ))}
             </SimpleGrid>

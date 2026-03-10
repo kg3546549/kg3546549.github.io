@@ -27,7 +27,7 @@ const Career: React.FC = () => {
               color="text.primary"
               whiteSpace="nowrap"
             >
-              <Text as="span" fontFamily="mono" color="accent.500" fontSize="xl" mr={2}>
+              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>
                 02.
               </Text>
               Career
@@ -64,12 +64,12 @@ const Career: React.FC = () => {
                     <Heading size="md" color="text.primary">
                       {item.company}
                     </Heading>
-                    <Text fontSize="sm" fontFamily="mono" color="gray.500">
+                    <Text fontSize="sm" fontFamily="body" color="gray.500">
                       {item.duration}
                     </Text>
                   </HStack>
                   
-                  <Text fontWeight="bold" color="brand.500" fontSize="sm" fontFamily="mono">
+                  <Text fontWeight="bold" color="brand.500" fontSize="sm" fontFamily="body">
                     {item.position}
                   </Text>
                   

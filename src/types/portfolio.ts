@@ -28,6 +28,8 @@ export interface Achievement {
   date: string;
   description: string;
   link?: string;
+  youtubeLink?: string;
+  githubLink?: string;
 }
 
 export interface CareerEntry {
