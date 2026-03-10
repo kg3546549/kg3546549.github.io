@@ -35,7 +35,7 @@ const Profile: React.FC = () => {
           gap={{ base: 10, md: 20 }}
         >
           <VStack align="flex-start" spacing={6} flex={1}>
-            <Text fontFamily="mono" color="brand.500" fontSize="lg">
+            <Text fontFamily="body" color="brand.500" fontSize="lg">
               Hi, my name is
             </Text>
             
@@ -71,7 +71,7 @@ const Profile: React.FC = () => {
                 href="#projects"
                 size="lg"
                 variant="outline"
-                fontFamily="mono"
+                fontFamily="body"
                 px={8}
                 onClick={(e) => {
                   e.preventDefault();

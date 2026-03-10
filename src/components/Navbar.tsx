@@ -25,7 +25,7 @@ const NavLink = ({ children, href, onClick }: { children: React.ReactNode; href:
     href={href}
     color="slate.700"
     fontWeight="medium"
-    fontFamily="mono"
+    fontFamily="body"
     fontSize="sm"
     onClick={(e) => {
       e.preventDefault();
@@ -77,7 +77,7 @@ const Navbar = () => {
       <Container maxW="6xl" h="100%">
         <Flex h="100%" alignItems={'center'} justifyContent={'space-between'}>
           <Text
-            fontFamily="mono"
+            fontFamily="body"
             color="brand.500"
             fontWeight="bold"
             fontSize="xl"

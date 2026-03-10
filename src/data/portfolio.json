@@ -1,10 +1,10 @@
 {
   "profile": {
-    "name": "홍길동",
+    "name": "김건",
     "title": "Firmware / Embedded Systems Developer",
     "email": "kg3546549@email.com",
     "github": "https://github.com/kg3546549",
-    "phone": "010-1234-5678",
+    "phone": "+82 10-4596-7142",
     "location": "서울, 대한민국",
     "avatar": "https://avatars.githubusercontent.com/u/71020096?v=4"
   },
@@ -19,23 +19,23 @@
   },
   "career": [
     {
-      "company": "(주)임베디드 솔루션즈",
-      "position": "시니어 펌웨어 엔지니어",
-      "duration": "2021.03 - 현재",
-      "description": "다양한 산업용 센서 노드 및 게이트웨이의 펌웨어 설계를 담당하고 있습니다.",
+      "company": "(주)에스원",
+      "position": "카드리더 펌웨어 엔지니어",
+      "duration": "2022.01 - 현재",
+      "description": "출입용 카드리더 임베디드 개발 및 품질 관리를 담당했습니다.",
       "projects": [
-        "저전력 무선 센서 네트워크 펌웨어 최적화",
-        "차세대 산업용 컨트롤러 플랫폼 개발 주도"
+        "ISO14443A/B 카드 리더 펌웨어 개발 및 최적화",
+        "RS422 통신 기반 카드리더 통신 프로토콜 설계 및 개발"
       ]
     },
     {
-      "company": "테크 시스템즈",
-      "position": "펌웨어 엔지니어",
-      "duration": "2018.01 - 2021.02",
-      "description": "차량용 임베디드 모듈 개발 및 품질 관리를 담당했습니다.",
+      "company": "(주)에스원",
+      "position": "출입 컨트롤러(ACU) 펌웨어 엔지니어",
+      "duration": "2019.02 - 2020.07",
+      "description": "출입 통제 시스템의 펌웨어 개발과 유지보수를 담당했습니다.",
       "projects": [
-        "자동차 도어 제어 모듈(DCM) 로직 구현",
-        "CAN 통신 드라이버 고도화 및 안정성 테스트"
+        "한양대학교 출입 통제 시스템 노후화 개선 개발",
+        "차세대 산업용 컨트롤러 플랫폼 개발 주도"
       ]
     }
   ],
@@ -45,23 +45,53 @@
       "technologies": [
         { 
           "name": "C", 
-          "level": "Expert",
+          "level": "Advanced",
           "badges": ["https://img.shields.io/badge/C-00599C?style=flat-square&logo=C&logoColor=white"]
         },
         { 
           "name": "C++", 
-          "level": "Advanced",
+          "level": "Intermediate",
           "badges": ["https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=Cplusplus&logoColor=white"]
-        },
-        { 
-          "name": "ARM Cortex-M", 
-          "level": "Advanced",
-          "badges": ["https://img.shields.io/badge/ARM-0091BD?style=flat-square&logo=ARM&logoColor=white"]
         },
         { 
           "name": "FreeRTOS", 
           "level": "Advanced",
           "badges": ["https://img.shields.io/badge/FreeRTOS-0085C1?style=flat-square&logo=FreeRTOS&logoColor=white"]
+        },
+        { 
+          "name": "Linux", 
+          "level": "Intermediate",
+          "badges": ["https://img.shields.io/badge/Linux-000000?style=flat-square&logo=Linux&logoColor=white"]
+        }
+      ]
+    },
+    {
+      "category": "Web",
+      "technologies": [
+        { 
+          "name": "React", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"]
+        },
+        { 
+          "name": "Nest.js", 
+          "level": "Intermediate",
+          "badges": ["https://img.shields.io/badge/Nest.js-E0234E?style=flat-square&logo=NestJS&logoColor=white"]
+        }
+      ]
+    },
+    {
+      "category": "Mobile",
+      "technologies": [
+        { 
+          "name": "Flutter", 
+          "level": "Advanced",
+          "badges": ["https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=Flutter&logoColor=white"]
+        },
+        { 
+          "name": "Swift", 
+          "level": "Intermediate",
+          "badges": ["https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=Swift&logoColor=white"]
         }
       ]
     },
@@ -70,17 +100,33 @@
       "technologies": [
         { "name": "Git", "level": "Advanced" },
         { "name": "Docker", "level": "Intermediate" },
-        { "name": "O-Scope/Logic Analyzer", "level": "Advanced" }
+        { "name": "OscilloScope/Logic Analyzer", "level": "Advanced" }
       ]
     }
   ],
   "achievements": [
     {
-      "title": "임베디드 해커톤 최우수상",
-      "organization": "K-Software 협회",
-      "date": "2023.11",
-      "description": "저전력 LoRa 기반 환경 모니터링 시스템 구축으로 1위 수상",
-      "link": "https://github.com/kg3546549/award-project"
+      "title": "2018 전국기능경기대회\n공업전자기기 동메달",
+      "organization": "고용노동부",
+      "date": "2018.10",
+      "description": "공업전자기기 분야에서 전국 3위를 차지하여 동메달을 수상하였습니다. \n대회에서는 PWM 측정기 회로 설계, 납땜, 로봇 팔 시스템 펌웨어 개발, 인형뽑기, 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.",
+      "link": "https://www.ccdailynews.com/news/articleView.html?idxno=980916",
+      "youtubeLink": "https://www.youtube.com/watch?v=heukxeQGX0Q",
+      "__githubLink__": "https://github.com/kg3546549/some-achievement-repo"
+    },
+    {
+      "title": "2018 충북기능경기대회\n공업전자기기 금메달",
+      "organization": "충청북도 교육청",
+      "date": "2018.10",
+      "description": "공업전자기기 분야에서 충북 1위를 차지하여 금메달을 수상하였습니다.",
+      "link": "https://www.jbnews.com/news/articleView.html?idxno=837057"
+    },
+    {
+      "title": "2017 전국기능경기대회\n공업전자기기 장려상",
+      "organization": "고용노동부",
+      "date": "2017.10",
+      "description": "공업전자기기 분야에서 전국 5위를 차지하여 장려상을 수상하였습니다.\n전자호구 회로 설계, 납땜 및 조립, 식물공장 제어 시스템 펌웨어 개발, 엘레베이터 제어기 회로 설계 및 조립 등 다양한 전자기기 제작 기술을 평가받았습니다.",
+      "link": "https://www.ccdailynews.com/news/articleView.html?idxno=980916"
     }
   ],
   "projects": [
