@@ -26,11 +26,12 @@ function App() {
         <Box id="tech">
           <TechStack />
         </Box>
-        <Box id="awards">
-          <Achievements />
-        </Box>
+        
         <Box id="projects">
           <Projects />
+        </Box>
+        <Box id="awards">
+          <Achievements />
         </Box>
         <Box id="activities">
           <ExtraActivities />

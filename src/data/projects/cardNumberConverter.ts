@@ -10,7 +10,7 @@ export const cardNumberConverter: Project = {
   ],
   duration: "2023.01",
   github: "",
-//   image: "images/card-converter/main.png",
+  image: "images/CSNConvertor/main.png",
   content: `### 개요
 타사 카드 시스템에서 발급된 **ISO14443 13.56MHz 카드 UID를 에스원 시스템에서 사용할 수 있도록 변환하는 도구**입니다.  
 카드 번호 체계를 분석하여 내부 시스템 규격에 맞게 재구성하고, 변환된 데이터를 파일로 관리할 수 있도록 구현했습니다.

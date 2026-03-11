@@ -13,7 +13,7 @@ export const imageConverter: Project = {
   ],
   duration: "2024.01",
   github: "",
-  // image: "images/image-converter/main.png",
+  image: "images/imageMaker/imageMaker.gif",
   content: `### 개요
 고객사의 CI 및 이미지를 **에스원 카드리더 장비에서 표시할 수 있는 포맷으로 변환하는 프로그램**입니다.  
 이미지 데이터를 카드리더 장비 규격에 맞게 처리하고 암호화하여 리더 장비에서 적용 가능한 **바이너리 이미지 파일을 생성**하도록 구현했습니다.

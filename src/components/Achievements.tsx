@@ -38,7 +38,7 @@ const Achievements: React.FC = () => {
               whiteSpace="nowrap"
             >
               <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>
-                04.
+                06.
               </Text>
               Awards & Achievements
             </Heading>

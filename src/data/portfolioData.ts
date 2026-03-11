@@ -31,7 +31,7 @@ export const portfolioData: PortfolioData = {
     `,
     highlights: [
       "ARM Cortex-M 시리즈 기반 펌웨어 개발 경험",
-      "FreeRTOS 및 Bare-metal 환경 최적화 설계 (STM32, ATMEGA ...)",
+      "FreeRTOS 및 Bare-metal 환경 개발 (STM32, ATMEGA ...)",
       "I2C, SPI, UART 등 다양한 통신 프로토콜 구현",
       "C/C++ 기반의 ISO14443 스마트카드 제어 로직 작성"
     ]
@@ -225,13 +225,17 @@ export const portfolioData: PortfolioData = {
     universityAccess,
     custom_security_systems,
     scardElectronReactApp,
+    
     cardNumberConverter,
     networkPacketAnalyzer,
+
     imageConverter,
-    cloudConnectionTestTool,
+    
     robotWebService,
     ros_slam_navigation,
-    xv6Practice
+    xv6Practice,
+    
+    cloudConnectionTestTool,
   ],
   thankYou: {
     message: 

@@ -13,7 +13,7 @@ export const networkPacketAnalyzer: Project = {
   ],
   duration: "2022.06",
   github: "",
-  // image: "images/network-analyzer/main.png",
+  image: "images/NetworkMonitor/main.png",
   content: `### 개요
 사내 출입, 근태, 식당 관리 시스템과 리더 장비 간 **네트워크 통신 로그 및 패킷 데이터를 분석하기 위한 도구**입니다.  
 통신 로그 파일을 기반으로 프로토콜별 데이터를 분석하고 시각화하여 **시스템 장애 원인 분석 및 디버깅**을 지원합니다.
