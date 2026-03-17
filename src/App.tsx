@@ -23,9 +23,9 @@ function App() {
         <Box id="career">
           <Career />
         </Box>
-        <Box id="tech">
+        {/* <Box id="tech">
           <TechStack />
-        </Box>
+        </Box> */}
         
         <Box id="projects">
           <Projects />

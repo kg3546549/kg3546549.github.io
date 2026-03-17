@@ -208,7 +208,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>04.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>03.</Text>
                 Key Work Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />
@@ -223,7 +223,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>05.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>04.</Text>
                 Toy Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />

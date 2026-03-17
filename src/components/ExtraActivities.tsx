@@ -30,7 +30,7 @@ const ExtraActivities: React.FC = () => {
               color="text.primary"
               whiteSpace="nowrap"
             >
-              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>07.</Text>
+              <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>06.</Text>
               Extra Activities
             </Heading>
             <Box h="1px" bg="gray.200" flex={1} ml={4} />
