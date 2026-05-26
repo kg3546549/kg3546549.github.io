@@ -16,7 +16,7 @@ export const scardElectronReactApp: Project = {
   ],
   duration: "2026.01",
   github: "https://github.com/kg3546549/Scard-electron-react-app",
-  image: "/images/ToyProject/스마트카드 통신 및 APDU 검증 도구/APDU Diagram 1.gif",
+  image: "/images/ToyProject/smartcard-apdu-tool/apdu-diagram-1.gif",
   content: `### 개요
 스마트카드 개발과 검증 과정에서 반복적으로 수행하는 **APDU 송수신, 응답 확인, 카드 데이터 분석** 을 효율화하기 위해 만든 데스크톱 도구입니다.
 

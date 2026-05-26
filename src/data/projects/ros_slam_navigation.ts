@@ -15,7 +15,7 @@ export const ros_slam_navigation: Project = {
   ],
   duration: "2025.01 - 2026.01",
   github: "",
-  image: "/images/ToyProject/ROS 기반 SLAM 및 Navigation/SLAM.gif",
+  image: "/images/ToyProject/ros-slam-navigation/slam.gif",
   content: `### 개요
 ROS1 Melodic 환경에서 **SLAM(Simultaneous Localization and Mapping)**과 **Navigation 자율주행 시스템**을 구현했습니다.  
 

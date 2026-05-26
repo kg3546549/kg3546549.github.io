@@ -18,7 +18,7 @@ export const accessControllerPlatform: Project = {
     'OTA',
   ],
   duration: '2019.02 - 2022.01',
-  image: '/images/WorkProject/출입·방범 제어장치 개발/AccessController.png',
+  image: '/images/WorkProject/access-security-controller/access-controller.png',
   content: `### 개요
 **Bare-metal, RTOS 기반 출입·방범 제어장치** 에서 출입, 방범, 센서 제어, 상위 소프트웨어 연동, 현장 설정, 펌웨어 배포 구조까지 포함한 애플리케이션을 개발했습니다.
 

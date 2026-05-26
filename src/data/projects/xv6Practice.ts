@@ -9,7 +9,7 @@ export const xv6Practice: Project = {
     "xv6",
     "QEMU",
   ],
-  image: "/images/ToyProject/xv6 OS 분석 및 커널 개발/SystemCall.png",
+  image: "/images/ToyProject/xv6-kernel-study/system-call.png",
   duration: "2025",
   github: "https://github.com/kg3546549/xv6_Practice",
   content: `# 개요

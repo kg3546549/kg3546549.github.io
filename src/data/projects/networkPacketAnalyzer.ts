@@ -13,7 +13,7 @@ export const networkPacketAnalyzer: Project = {
   ],
   duration: "2022.06",
   github: "",
-  image: "/images/ToyProject/단말 통신 로그·패킷 분석 도구/main.png",
+  image: "/images/ToyProject/packet-analyzer/main.png",
   content: `### 개요
 현장 장애 대응 과정에서 반복적으로 필요한 **통신 로그 분석, 패킷 확인, 프로토콜별 시각화** 작업을 빠르게 수행하기 위해 만든 분석 도구입니다.
 

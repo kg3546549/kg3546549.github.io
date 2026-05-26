@@ -16,7 +16,7 @@ export const contactlessCredentialTerminal: Project = {
     'SPI',
   ],
   duration: '2022.01 - 현재',
-  image: '/images/WorkProject/비접촉 카드·모바일카드 인증 단말 개발/S1AccessControl.jpg',
+  image: '/images/WorkProject/contactless-mobile-card-terminal/s1-access-control.jpg',
   content: `### 개요
 출입 단말에서 **실물 비접촉 카드와 모바일카드(NFC/BLE)** 를 함께 처리할 수 있도록 카드리더 펌웨어와 인증 사양을 개발했습니다.
 

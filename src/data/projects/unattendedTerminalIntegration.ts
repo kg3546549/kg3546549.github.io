@@ -16,7 +16,7 @@ export const unattendedTerminalIntegration: Project = {
     'Electron',
   ],
   duration: '2022.01 - 현재',
-  image: '/images/WorkProject/무인단말 인증 연동 및 통신 프로토콜 개발/KIOSK.png',
+  image: '/images/WorkProject/unattended-terminal-protocol/kiosk.png',
   content: `### 개요
 복합기, 키오스크, POS 같은 **무인단말 환경** 에서 카드리더를 안정적으로 연동하기 위해 인증 프로세스와 통신 프로토콜을 설계했습니다.
 

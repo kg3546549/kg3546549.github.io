@@ -16,7 +16,7 @@ export const biometricTerminalPlatform: Project = {
     'OTA',
   ],
   duration: '2019.02 - 현재',
-  image: '/images/WorkProject/지문·얼굴인증 단말 개발 및 운영 안정화/S1FaceReader.png',
+  image: '/images/WorkProject/biometric-terminal-stabilization/s1-face-reader.png',
   content: `### 개요
 **Bare-metal, RTOS, Linux** 기반 임베디드 단말에서 지문인증기와 얼굴인식 단말을 개발하고, 실제 운영 중 발생하는 장애를 분석해 개선했습니다.
 

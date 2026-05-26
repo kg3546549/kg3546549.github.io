@@ -14,13 +14,13 @@ export const robotWebService: Project = {
   ],
   duration: "2025.01 - 2026.12",
   github: "https://github.com/kg3546549/SSU-Robot-RCS-Frontend-V2",
-  image: "/images/ToyProject/실시간 로봇 모니터링 및 제어 시스템/gif.gif",
+  image: "/images/ToyProject/robot-monitoring-system/demo.gif",
   content: `### 개요
 ROS1 기반 로봇을 **웹 브라우저에서 실시간으로 모니터링하고 제어할 수 있는 Robot Control System**을 설계 및 구현했습니다.  
 Frontend–Backend–Robot 구조로 분리된 아키텍처를 통해 **보안성과 확장성을 확보**하고, WebSocket 기반 통신으로 **저지연 실시간 제어와 센서 스트리밍**을 제공합니다.
 
 시스템은 Yahboom **Rosmaster X3 Plus** 로봇을 대상으로 Ubuntu 18.04 / ROS Melodic 환경에서 실험되었습니다.
-![아키텍처](/images/ToyProject/실시간 로봇 모니터링 및 제어 시스템/Architecture.png)
+![아키텍처](/images/ToyProject/robot-monitoring-system/architecture.png)
 ### 주요 기능
 - WebSocket 기반 **실시간 로봇 이동 및 회전 제어**
 - **조이스틱 기반 원격 제어 인터페이스**
