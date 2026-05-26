@@ -36,7 +36,7 @@ const NavLink = ({ children, href, onClick }: { children: React.ReactNode; href:
       if (onClick) onClick();
     }}
   >
-    <Text as="span" color="brand.500" mr={1}>//</Text>
+    <Text as="span" color="brand.500" mr={1}>{'//'}</Text>
     {children}
   </Link>
 );
@@ -56,8 +56,9 @@ const Navbar = () => {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Career', href: '#career' },
-    // { name: 'Tech', href: '#tech' },
+    { name: 'Tech', href: '#tech' },
     { name: 'Awards', href: '#awards' },
+    { name: 'Language', href: '#languages' },
     { name: 'Projects', href: '#projects' },
     { name: 'Activities', href: '#activities' },
   ];

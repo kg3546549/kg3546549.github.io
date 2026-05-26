@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Flex,
-  Avatar,
   Heading,
   Text,
   Link,
@@ -12,16 +11,19 @@ import {
   HStack,
   Icon,
   Button,
+  Image,
 } from '@chakra-ui/react';
 import { FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
 
 const Profile: React.FC = () => {
-  const { profile } = usePortfolioStore((state) => state.data);
+  const { profile, about } = usePortfolioStore((state) => state.data);
 
   return (
     <Box
       minH="100vh"
+      pt={{ base: '90px', md: '100px' }}
+      pb={{ base: 10, md: 0 }}
       display="flex"
       alignItems="center"
       position="relative"
@@ -60,9 +62,20 @@ const Profile: React.FC = () => {
 
             <Box maxW="600px">
               <Text fontSize="lg" color="gray.600">
-                
+                {about.introduction.trim()}
               </Text>
             </Box>
+
+            <HStack spacing={6} wrap="wrap">
+              <HStack spacing={2}>
+                <Icon as={FaPhone as any} color="brand.500" />
+                <Text fontSize="sm" color="gray.600">{profile.phone}</Text>
+              </HStack>
+              <HStack spacing={2}>
+                <Icon as={FaMapMarkerAlt as any} color="brand.500" />
+                <Text fontSize="sm" color="gray.600">{profile.location}</Text>
+              </HStack>
+            </HStack>
 
             <HStack spacing={6} pt={8}>
               <Button
@@ -106,16 +119,26 @@ const Profile: React.FC = () => {
             </HStack>
           </VStack>
 
-          <Box>
-            <Avatar
-              size="2xl"
+          <Box
+            w={{ base: '140px', md: '280px' }}
+            h={{ base: '140px', md: '280px' }}
+            border="4px solid"
+            borderColor="brand.500"
+            borderRadius="full"
+            boxShadow="2xl"
+            overflow="hidden"
+            bg="white"
+            position="relative"
+          >
+            <Image
               src={profile.avatar}
-              name={profile.name}
-              w={{ base: '150px', md: '300px' }}
-              h={{ base: '150px', md: '300px' }}
-              border="4px solid"
-              borderColor="brand.500"
-              boxShadow="2xl"
+              alt={profile.name}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              objectPosition="center 24%"
+              transform="scale(1.02)"
+              transformOrigin="center"
             />
           </Box>
         </Flex>

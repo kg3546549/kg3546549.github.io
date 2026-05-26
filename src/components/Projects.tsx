@@ -19,6 +19,12 @@ import {
   ModalCloseButton,
   useDisclosure,
   Divider,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
 } from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt, FaFolder, FaGamepad } from 'react-icons/fa';
 import { usePortfolioStore } from '../store/portfolioStore';
@@ -28,18 +34,84 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
   const lines = content.split('\n');
 
   const renderInline = (text: string, color: string = "gray.600") => {
-    const parts = text.split(/(\*\*.*?\*\*)/g);
-    return parts.map((part, i) => 
-      part.startsWith('**') && part.endsWith('**') 
-        ? <Text as="span" key={i} fontWeight="bold" color="brand.500">{part.slice(2, -2)}</Text>
-        : <Text as="span" key={i} color={color}>{part}</Text>
-    );
+    const parts = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <Text as="span" key={i} fontWeight="bold" color="brand.500">{part.slice(2, -2)}</Text>;
+      }
+
+      const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (linkMatch) {
+        return (
+          <Link key={i} href={linkMatch[2]} isExternal color="brand.500" fontWeight="medium">
+            {linkMatch[1]}
+          </Link>
+        );
+      }
+
+      return <Text as="span" key={i} color={color}>{part}</Text>;
+    });
   };
 
   return (
     <VStack align="flex-start" spacing={3} w="100%">
       {lines.map((line, index) => {
         const trimmedLine = line.trim();
+        const isTableLine = trimmedLine.startsWith('|') && trimmedLine.endsWith('|');
+
+        if (
+          isTableLine &&
+          index + 2 < lines.length &&
+          lines[index + 1].trim().match(/^\|(?:\s*:?-+:?\s*\|)+$/)
+        ) {
+          const parseRow = (row: string) =>
+            row
+              .trim()
+              .slice(1, -1)
+              .split('|')
+              .map((cell) => cell.trim());
+
+          const header = parseRow(lines[index]);
+          const rows = [];
+          let rowIndex = index + 2;
+
+          while (rowIndex < lines.length) {
+            const current = lines[rowIndex].trim();
+            if (!(current.startsWith('|') && current.endsWith('|'))) break;
+            rows.push(parseRow(current));
+            rowIndex++;
+          }
+
+          lines.splice(index + 1, rowIndex - index - 1);
+
+          return (
+            <Box key={index} w="100%" overflowX="auto" py={2}>
+              <Table size="sm" variant="simple">
+                <Thead>
+                  <Tr>
+                    {header.map((cell, cellIndex) => (
+                      <Th key={cellIndex} color="text.primary">
+                        {cell}
+                      </Th>
+                    ))}
+                  </Tr>
+                </Thead>
+                <Tbody>
+                  {rows.map((row, rIdx) => (
+                    <Tr key={rIdx}>
+                      {row.map((cell, cIdx) => (
+                        <Td key={cIdx} color="gray.600">
+                          {cell}
+                        </Td>
+                      ))}
+                    </Tr>
+                  ))}
+                </Tbody>
+              </Table>
+            </Box>
+          );
+        }
+
         if (trimmedLine.startsWith('# ')) {
           return (
             <Heading key={index} size="lg" pt={3} color="text.primary">
@@ -208,7 +280,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>03.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>04.</Text>
                 Key Work Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />
@@ -223,7 +295,7 @@ const Projects: React.FC = () => {
           <VStack spacing={12} align="stretch">
             <Flex align="center" w="100%">
               <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} display="flex" alignItems="baseline" color="text.primary" whiteSpace="nowrap">
-                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>04.</Text>
+                <Text as="span" fontFamily="body" color="accent.500" fontSize="xl" mr={2}>05.</Text>
                 Toy Projects
               </Heading>
               <Box h="1px" bg="gray.200" flex={1} ml={4} />

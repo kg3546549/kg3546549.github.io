@@ -12,7 +12,7 @@ import {
 import { usePortfolioStore } from '../store/portfolioStore';
 
 const Career: React.FC = () => {
-  const { career } = usePortfolioStore((state) => state.data);
+  const { career, education, military } = usePortfolioStore((state) => state.data);
 
   return (
     <Box py={20} id="career">
@@ -91,6 +91,76 @@ const Career: React.FC = () => {
               </Flex>
             ))}
           </VStack>
+
+          {education && education.length > 0 && (
+            <VStack spacing={6} align="stretch" pt={4}>
+              <Heading as="h3" size="md" color="text.primary">
+                Education
+              </Heading>
+              <VStack spacing={4} align="stretch">
+                {education.map((item, index) => (
+                  <Box
+                    key={index}
+                    bg="gray.50"
+                    p={6}
+                    borderRadius="md"
+                    border="1px solid"
+                    borderColor="gray.200"
+                  >
+                    <HStack w="100%" justify="space-between" align="baseline" wrap="wrap">
+                      <Heading size="sm" color="text.primary">
+                        {item.school}
+                      </Heading>
+                      <Text fontSize="sm" fontFamily="body" color="gray.500">
+                        {item.duration}
+                      </Text>
+                    </HStack>
+                    <Text fontWeight="bold" color="brand.500" fontSize="sm" fontFamily="body" pt={2}>
+                      {item.major}
+                    </Text>
+                    <Text color="gray.600" pt={2}>
+                      {item.status}
+                    </Text>
+                  </Box>
+                ))}
+              </VStack>
+            </VStack>
+          )}
+
+          {military && military.length > 0 && (
+            <VStack spacing={6} align="stretch" pt={4}>
+              <Heading as="h3" size="md" color="text.primary">
+                Military Service
+              </Heading>
+              <VStack spacing={4} align="stretch">
+                {military.map((item, index) => (
+                  <Box
+                    key={index}
+                    bg="gray.50"
+                    p={6}
+                    borderRadius="md"
+                    border="1px solid"
+                    borderColor="gray.200"
+                  >
+                    <HStack w="100%" justify="space-between" align="baseline" wrap="wrap">
+                      <Heading size="sm" color="text.primary">
+                        {item.organization}
+                      </Heading>
+                      <Text fontSize="sm" fontFamily="body" color="gray.500">
+                        {item.duration}
+                      </Text>
+                    </HStack>
+                    <Text fontWeight="bold" color="brand.500" fontSize="sm" fontFamily="body" pt={2}>
+                      {item.position}
+                    </Text>
+                    <Text color="gray.600" pt={2}>
+                      {item.description}
+                    </Text>
+                  </Box>
+                ))}
+              </VStack>
+            </VStack>
+          )}
         </VStack>
       </Container>
     </Box>

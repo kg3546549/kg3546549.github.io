@@ -15,7 +15,7 @@ export const custom_security_systems: Project = {
   ],
   duration: "",
   github: "",
-  image: "images/S1/S1FingerReader.png",
+  image: "/images/WorkProject/무인단말 인증 연동 및 통신 프로토콜 개발/S1FingerReader.png",
   content: `### 개요
 금융기관, 병원, 공공기관을 대상으로 **고객 요구사항 기반(Customizing) 보안 시스템 및 지문/얼굴 인식 리더기 개발**을 수행했습니다.
 

@@ -13,13 +13,6 @@ import {
 } from '@chakra-ui/react';
 import { usePortfolioStore } from '../store/portfolioStore';
 
-const levelColors = {
-  'Beginner': 'gray',
-  'Intermediate': 'blue',
-  'Advanced': 'cyan',
-  'Expert': 'brand',
-};
-
 const TechStack: React.FC = () => {
   const { techStack } = usePortfolioStore((state) => state.data);
 
@@ -44,11 +37,13 @@ const TechStack: React.FC = () => {
             <Box h="1px" bg="gray.200" flex={1} ml={4} />
           </Flex>
 
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={4}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} justifyItems="center">
             {techStack.map((category, index) => (
               <VStack
                 key={index}
                 align="stretch"
+                w="100%"
+                maxW="340px"
                 bg="gray.50"
                 p={4}
                 borderRadius="md"

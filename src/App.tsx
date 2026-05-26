@@ -6,6 +6,7 @@ import About from './components/About';
 import Career from './components/Career';
 import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
+import Languages from './components/Languages';
 import ExtraActivities from './components/ExtraActivities';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
@@ -23,15 +24,18 @@ function App() {
         <Box id="career">
           <Career />
         </Box>
-        {/* <Box id="tech">
+        <Box id="tech">
           <TechStack />
-        </Box> */}
-        
+        </Box>
+
         <Box id="projects">
           <Projects />
         </Box>
         <Box id="awards">
           <Achievements />
+        </Box>
+        <Box id="languages">
+          <Languages />
         </Box>
         <Box id="activities">
           <ExtraActivities />

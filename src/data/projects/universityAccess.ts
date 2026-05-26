@@ -5,7 +5,7 @@ export const universityAccess: Project = {
   description: "대학교 출입 통제 시스템 구축 및 카드리더 커스터마이징 펌웨어 개발",
   techStack: ["STM32", "C", "Serial", "ucOS-II"],
   duration: "2022.01 - 현재",
-  image: "/images/S1/S1AccessControl.jpg",
+  image: "/images/WorkProject/비접촉 카드·모바일카드 인증 단말 개발/S1AccessControl.jpg",
   content: `
 # 프로젝트 개요
 대규모 / 기업 등 엔터프라이즈 출입 방범 시스템 구축

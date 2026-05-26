@@ -40,12 +40,33 @@ export interface Activity {
   type: 'Technical Committee' | 'Interpretation' | 'Volunteer' | 'Mentoring' | 'Other';
 }
 
+export interface LanguageCertification {
+  language: string;
+  exam: string;
+  level: string;
+  description?: string;
+}
+
 export interface CareerEntry {
   company: string;
   position: string;
   duration: string;
   description: string;
   projects?: string[];
+}
+
+export interface EducationEntry {
+  school: string;
+  major: string;
+  duration: string;
+  status: string;
+}
+
+export interface MilitaryEntry {
+  organization: string;
+  position: string;
+  duration: string;
+  description: string;
 }
 
 export interface PortfolioData {
@@ -63,8 +84,11 @@ export interface PortfolioData {
     highlights: string[];
   };
   career: CareerEntry[];
+  education?: EducationEntry[];
+  military?: MilitaryEntry[];
   techStack: TechCategory[];
   achievements: Achievement[];
+  languages?: LanguageCertification[];
   activities?: Activity[];
   projects: Project[];
   thankYou: {
