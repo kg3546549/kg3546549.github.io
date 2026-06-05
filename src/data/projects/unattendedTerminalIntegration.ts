@@ -1,7 +1,7 @@
 import { Project } from '../../types/portfolio';
 
 export const unattendedTerminalIntegration: Project = {
-  title: '무인단말 인증 연동 및 통신 프로토콜 개발',
+  title: '단말 통신 프로토콜 및 인터페이스 개발',
   type: 'project',
   description:
     '복합기, 키오스크, POS 환경에서 카드리더 인증 프로세스와 USB/Serial 통신 프로토콜을 설계하고 연동 소프트웨어까지 개발했습니다.',
@@ -35,13 +35,14 @@ export const unattendedTerminalIntegration: Project = {
 - 단말-상위시스템-주변장치 간 인터페이스 설계
 - 운영 환경에서 발생하는 통신 지연, 노이즈, 비정상 응답 대응
 
-## 토스플레이스와의 접점
-- POS/KIOSK 계열 디바이스 연동 경험
-- 단말 통신 전문 설계 및 데이터 처리 경험
-- 하드웨어와 PC 애플리케이션을 함께 다루는 디바이스 통합 경험`,
+## 42dot OTA 직무와의 접점
+- OTA/유선 업데이트 시스템에 필요한 **통신 프로토콜과 데이터 인터페이스 정의** 역량
+- 제어기, 상위 시스템, 주변 장치 사이의 상태 관리와 예외 처리 경험
+- 재전송, 타임아웃, 비정상 응답 등 업데이트 통신에서도 중요한 안정화 로직 구현 경험
+- 하드웨어와 애플리케이션을 함께 이해하며 이슈를 조율한 디바이스 통합 경험`,
   highlights: [
     '복합기·키오스크·POS 환경의 USB/Serial 인증 연동 플랫폼 개발',
-    'RS232/RS485/RS422/Ethernet 기반 단말 통신 프로토콜 설계',
+    'RS232/RS485/RS422/Ethernet 기반 단말 통신 프로토콜 및 데이터 인터페이스 설계',
     'Polling, 재전송, 타임아웃, 예외 처리 중심의 통신 안정화 경험',
     'Electron.js 기반 연동 소프트웨어와 통신변환기 모듈까지 통합 개발',
   ],

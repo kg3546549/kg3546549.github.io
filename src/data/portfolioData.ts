@@ -17,7 +17,7 @@ import {
 export const portfolioData: PortfolioData = {
   profile: {
     name: '김건',
-    title: 'Embedded Firmware Engineer',
+    title: 'Embedded Software Engineer',
     email: 'kg3546549@email.com',
     github: 'https://github.com/kg3546549',
     phone: '+82 10-4596-7142',
@@ -27,14 +27,14 @@ export const portfolioData: PortfolioData = {
   about: {
     introduction: `
 6년 이상 카드리더, 지문리더, 얼굴리더 등 인증 단말을 개발해 온 임베디드 소프트웨어 엔지니어입니다.
-ISO14443A 기반의 Contactless 카드와 모바일카드 인증, SAM 기반 보안 처리, 단말 통신 프로토콜 설계, 현장 장애 분석과 안정화까지 단말 소프트웨어 전반을 담당해 왔습니다.
-토스플레이스의 결제 단말 개발 업무와 직접 맞닿는 NFC, 교통카드, 보안 모듈, 임베디드 플랫폼 경험을 중심으로 포트폴리오를 구성했습니다.
+Bare-metal, RTOS, Linux 기반 단말에서 Firmware Task, 통신 프로토콜, Bootloader, Firmware Download Protocol, OTA 구조를 설계하고 운영 환경의 장애를 분석해 개선해 왔습니다.
+42dot의 SDV OTA/유선 소프트웨어 업데이트 직무와 맞닿는 업데이트 시스템, 제어기 통신, Linux 기반 단말, 현장 이슈 대응 경험을 중심으로 포트폴리오를 구성했습니다.
 `,
     highlights: [
-      'ISO14443A/B, Tmoney, Ezl, NFC/BLE 모바일카드 기반 카드리더 개발',
-      'ISO7816 SAM 인증 처리 및 암복호화 로직 구현',
+      'Bootloader 및 Firmware Download Protocol 기반 OTA 업데이트 구조 설계',
       'Bare-metal, RTOS, Linux 기반 단말 개발 경험 (STM32, Rockchip, AVR, PIC)',
-      'USB/Serial, CAN, M-LAN, RS232/RS485/RS422, Ethernet 기반 단말 통신 프로토콜 설계 및 안정화',
+      'USB/Serial, CAN, M-LAN, RS232/RS485/RS422, Ethernet 기반 통신 프로토콜 설계 및 안정화',
+      '현장 업데이트, 네트워크 드라이버, 통신 장애 재현 및 원인 분석 경험',
     ],
   },
   career: [
@@ -43,16 +43,15 @@ ISO14443A 기반의 Contactless 카드와 모바일카드 인증, SAM 기반 보
       position: '카드리더 펌웨어 엔지니어',
       duration: '2022.01 - 현재',
       description:
-        '비접촉 카드, 모바일카드, 무인단말 연동 중심의 카드리더 펌웨어와 인증 사양을 설계하고 개발했습니다.',
+        '비접촉 카드, 모바일카드, 무인단말 연동 중심의 카드리더 펌웨어와 인증·통신 사양을 설계하고 개발했습니다.',
       projects: [
-        'ISO14443A/B 실물카드 및 NFC/BLE 모바일카드 카드리더 개발',
-        'Tmoney/Ezl 실물카드·모바일카드 출입 시스템 적용',
-        'ISO7816 SAM 기반 인증 및 암복호화 로직 구현',
         '복합기/키오스크/POS 연동용 USB Serial 인증 프로토콜 설계',
         'RS232/RS485/RS422/Ethernet 기반 단말 통신 전문 설계 및 안정화',
         '지문인증 단말 개발 및 OTA, Ethernet 기반 기기 관리 프로토콜 개발',
         'Linux + Qt 기반 얼굴인식 단말 UI/UX 개선 및 서버 기반 인증 연동',
         '현장 통신 장애, 네트워크 드라이버 이슈 원인 분석 및 개선 개발',
+        'ISO14443A/B 실물카드 및 NFC/BLE 모바일카드 카드리더 개발',
+        'ISO7816 SAM 기반 인증 및 암복호화 로직 구현',
       ],
     },
     {
@@ -119,6 +118,16 @@ ISO14443A 기반의 Contactless 카드와 모바일카드 인증, SAM 기반 보
           name: 'Linux',
           level: 'Intermediate',
           badges: ['https://img.shields.io/badge/Linux-000000?style=flat-square&logo=Linux&logoColor=white'],
+        },
+        {
+          name: 'Bootloader / OTA',
+          level: 'Intermediate',
+          badges: [],
+        },
+        {
+          name: 'Communication Protocol',
+          level: 'Advanced',
+          badges: [],
         },
       ],
     },
@@ -234,9 +243,10 @@ ISO14443A 기반의 Contactless 카드와 모바일카드 인증, SAM 기반 보
     },
   ],
   projects: [
-    contactlessCredentialTerminal,
-    unattendedTerminalIntegration,
+    accessControllerPlatform,
     biometricTerminalPlatform,
+    unattendedTerminalIntegration,
+    contactlessCredentialTerminal,
     robotWebService,
     ros_slam_navigation,
     xv6Practice,
@@ -245,10 +255,9 @@ ISO14443A 기반의 Contactless 카드와 모바일카드 인증, SAM 기반 보
     networkPacketAnalyzer,
     imageConverter,
     cloudConnectionTestTool,
-    accessControllerPlatform,
   ],
   thankYou: {
-    message: `비접촉 카드, 보안 모듈, 단말 통신, 운영 안정화 경험을 결제 단말 도메인에 확장하고 싶습니다.
-결제 단말 소프트웨어를 더 깊게 개발할 기회를 찾고 있습니다.`,
+    message: `단말 업데이트 구조, 통신 프로토콜, Linux 기반 디바이스 운영 안정화 경험을 SDV 소프트웨어 업데이트 도메인으로 확장하고 싶습니다.
+안전하고 일관된 차량 소프트웨어 업데이트 경험을 만드는 엔지니어로 기여하고 싶습니다.`,
   },
 };

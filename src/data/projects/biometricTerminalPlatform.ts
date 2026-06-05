@@ -1,7 +1,7 @@
 import { Project } from '../../types/portfolio';
 
 export const biometricTerminalPlatform: Project = {
-  title: '지문·얼굴인증 단말 개발 및 운영 안정화',
+  title: 'Linux·RTOS 단말 운영 안정화',
   type: 'project',
   description:
     'Bare-metal, RTOS, Linux 기반으로 지문·얼굴인증 단말을 개발하고, 서버 연동 인증과 현장 장애 분석을 통해 운영 안정화를 수행했습니다.',
@@ -36,13 +36,14 @@ export const biometricTerminalPlatform: Project = {
 - 네트워크 드라이버 장애 원인 분석 및 개선 개발
 - 출입/방범/식당/근태 시스템의 실운영 환경 대응
 
-## 토스플레이스와의 접점
-- 여러 OS 환경에서의 디바이스 소프트웨어 개발 경험
-- 단말 기능 개발부터 운영 안정화까지 연결된 경험
-- 현장 장애를 재현하고 원인을 분석해 개선하는 실무 역량`,
+## 42dot OTA 직무와의 접점
+- Bare-metal, RTOS, Linux 등 다양한 런타임 환경에서의 디바이스 소프트웨어 개발 경험
+- OTA 플랫폼, Ethernet 기반 기기 관리, 서버 연동 인증 프로토콜 개발 경험
+- 현장 장애를 재현하고 네트워크 드라이버, 통신 상태, 단말 로그를 분석해 개선한 경험
+- 양산 이후 운영 환경에서 발생하는 업데이트/통신 이슈 대응 역량`,
   highlights: [
     'Bare-metal, RTOS, Linux 기반 임베디드 단말 개발 경험',
-    '지문인증 단말 개발, OTA, 운영 장애 대응 수행',
+    '지문인증 단말 개발, OTA 플랫폼, 운영 장애 대응 수행',
     'Linux + Qt 기반 얼굴인식 단말 및 서버 기반 인증 연동 개발',
     '현장 테스트와 네트워크 드라이버 이슈 분석을 통한 운영 안정화',
   ],

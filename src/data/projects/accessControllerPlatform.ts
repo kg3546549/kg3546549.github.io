@@ -1,10 +1,10 @@
 import { Project } from '../../types/portfolio';
 
 export const accessControllerPlatform: Project = {
-  title: '출입·방범 제어장치 개발',
+  title: '제어장치 Firmware OTA 구조 개발',
   type: 'project',
   description:
-    'Bare-metal, RTOS 기반 출입·방범 제어장치에서 CAN, M-LAN, RS422, Ethernet 기반 제어 애플리케이션과 현장 설정, Firmware OTA 구조를 개발했습니다.',
+    'Bare-metal, RTOS 기반 출입·방범 제어장치에서 Bootloader, Firmware Download Protocol, 현장 설정 경로를 포함한 업데이트 구조를 개발했습니다.',
   techStack: [
     'C',
     'STM32',
@@ -37,15 +37,16 @@ export const accessControllerPlatform: Project = {
 - 펌웨어 배포를 위한 업데이트 안정성과 복구 가능성 고려
 - 운영 환경에서 발생하는 통신 예외와 현장 대응 시나리오 반영
 
-## 토스플레이스와의 접점
-- 단말과 상위 시스템 간 **통신 사양 설계** 경험
-- 현장 운영을 고려한 **Bootloader / OTA 업데이트 구조** 설계 경험
-- 여러 인터페이스를 통합하는 **디바이스 애플리케이션 개발** 경험`,
+## 42dot OTA 직무와의 접점
+- SDV 업데이트 시스템과 유사한 **업데이트 패키지 전달, 검증, 설치 흐름** 에 대한 실무 경험
+- 현장 운영을 고려한 **Bootloader / Firmware Download Protocol / OTA 구조** 설계 경험
+- 다양한 제어 인터페이스를 통합하고 예외 상황을 고려한 **디바이스 소프트웨어 개발** 경험
+- 업데이트 실패, 통신 지연, 장비 상태 변화 등 운영 시나리오를 고려한 안정화 경험`,
   highlights: [
-    'Bare-metal / RTOS 기반 Firmware Task 및 DataQueue 구조 설계',
-    'CAN, M-LAN, RS422 기반 출입·방범·센서 제어 애플리케이션 개발',
-    'Ethernet 기반 출입제어 소프트웨어 연동 사양 설계 및 개발',
-    'Wi-Fi / RS232 기반 기기 설정 모바일 앱 연동 개발',
     'Bootloader 및 Firmware Download Protocol 기반 OTA 구조 설계',
+    'Bare-metal / RTOS 기반 Firmware Task 및 DataQueue 구조 설계',
+    'CAN, M-LAN, RS422, Ethernet 기반 제어기 통신 애플리케이션 개발',
+    'Wi-Fi / RS232 기반 현장 설정 및 업데이트 경로 연동 개발',
+    '운영 환경의 통신 예외와 복구 시나리오를 고려한 안정화',
   ],
 };
